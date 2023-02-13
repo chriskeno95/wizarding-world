@@ -26,14 +26,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./menu.html">Menu</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./characters.html">Characters</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="./characters.html">Characters<span class="sr-only">(current)</span></a>
       </li>
             <li class="nav-item">
         <a class="nav-link" href="./spells.html">Spells</a>
@@ -47,11 +47,34 @@
     </div>
   </div>
 </nav>
-    <article id="main">
-      <div class="welcome">
-        <h1 id="welcome-msg">WELCOME TO THE <br />WIZARDING WORLD</h1>
-        <a href="./menu.html"><button id="enter">ENTER</button></a>
+    <article id="characters">
+         <button class="previous-character"><img src="./assets/images/arrow.png" height="40px" alt=""></button>
+      <div class="card mb-5 character-card" style="max-width: 800px;">
+  <div class="row no-gutters">
+    <div class="col-sm-5 id-card">
+        <img src="./assets/images/harry.jpg" alt="">
+    </div>
+    <div class="col-sm-7">
+      <div class="card-body">
+        <h5 id="character-name" class="card-title">Harry Potter</h5>
+        <ol class="card-text">
+            <li>Species: <span id="species-type">Human</span></li>
+        <li>Date of Birth: <span id="birth-date">31-07-1980</span></li>
+        <li>Hogwarts House: <span id="House">Griffindor</span></li>
+        <li>Patronus: <span id="patronus">Stag</span></li>
+        <li class="wand-stats">wand:
+        </li>
+        <li>Length:<span id="wand-length">11 inches</span></li>
+        <li>Core:<span id="wand-core">Phoenix feather</span></li>
+        <li>Wood:<span id="wand-wood">Holly</span></li>
+        </ol>
+        <img class="wand" src="./assets/images/harry-wand.png" alt="characters wand">
+        
       </div>
+    </div>
+  </div>
+</div>
+<button class="next-character"><img src="./assets/images/next-arrow.png" height="40px" alt=""></button>
     </article>
 
     

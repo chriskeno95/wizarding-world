@@ -1,0 +1,128 @@
+body{
+    background-image:url(./assets/images/bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+.navbar {
+    background-color: #0D162C;
+    border-bottom: solid 4px #DCDDE0;
+}
+article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(50, 49, 49, 0.455);
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+#welcome-msg{
+    color: white;
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 50px;
+}
+#enter{
+    margin: 30px;
+    padding: 10px 30px;
+    background-color:#0D162C;
+    border: solid white;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.form-control{
+    background-color: #0D162C;
+}
+.search{
+    display: flex;
+    align-items: center;
+    border: white solid 1px;
+    border-radius: 50px !important;
+    margin: 10px;
+}
+.search-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
+
+}
+.search input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    color: white;
+
+}
+.search-bar button img{
+    width: 20px;
+}
+::placeholder{
+    color: white;
+}
+
+.menu-choices button{
+    font-size: 25px;
+}
+
+.character-card{
+    max-height: 500px;
+    background-color: #CB984E;
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.id-card img{
+  padding: 2em;
+  height: 400px;
+}
+.card-title{
+    font-size: 2em;
+    color: white;
+}
+
+.card-body ol{
+    font-weight: bold;
+}
+.card-body li {
+    padding: 3px;
+}
+.card-body ol span {
+    color: white;
+    font-weight: 400;
+    padding: 4px;
+    
+}
+.wand{
+width:400px
+}
+.spell-card {
+    height: 240px;
+    max-height: 300px;
+    background-color: #CB984E;
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+#spell-name{
+    padding: 15px;
+}
+#spell-description {
+    padding: 10px;
+}

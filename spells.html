@@ -26,8 +26,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./menu.html">Menu</a>
@@ -35,8 +35,8 @@
       <li class="nav-item">
         <a class="nav-link" href="./characters.html">Characters</a>
       </li>
-            <li class="nav-item">
-        <a class="nav-link" href="./spells.html">Spells</a>
+          <li class="nav-item active">
+        <a class="nav-link" href="./spells.html">Spells<span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <div class="search">
@@ -47,11 +47,15 @@
     </div>
   </div>
 </nav>
-    <article id="main">
-      <div class="welcome">
-        <h1 id="welcome-msg">WELCOME TO THE <br />WIZARDING WORLD</h1>
-        <a href="./menu.html"><button id="enter">ENTER</button></a>
+    <article>
+         <button class="previous-spell"><img src="./assets/images/arrow.png" height="40px" alt=""></button>
+      <div class="card mb-5 spell-card" style="max-width: 400px;">
+      <div class="card-body text-center">
+        <h1 id="spell-name"class="card-title">Alohomora</h1>
+        <h2 id="spell-description"class="card-text">Unlocks objects</h2>
       </div>
+    </div>
+<button class="next-spell"><img src="./assets/images/next-arrow.png" height="40px" alt=""></button>
     </article>
 
     
