@@ -121,11 +121,11 @@ width:400px
     border-radius: 20px;
 }
 #spell-name{
-    padding: 8px;
+    padding: 3px;
 }
 #spell-description {
     padding: 0px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
 }
 .hide{

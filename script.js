@@ -29,11 +29,13 @@ var deansWand = "./assets/images/dean_wand.png";
 var chosWand = "./assets/images/cho_wand.png";
 var cedricsWand = "./assets/images/cedric_wand.png";
 var bellatrixsWand = "./assets/images/bellatrix_wand.png";
+var unknownWand = "./assets/images/unknown_wand.png"
 
     var nextCharacter = $(".next-character");
     var prevCharacter = $(".previous-character");
     var prevSpell = $(".previous-spell");
     var nextSpell = $(".next-spell");
+    var search = $("#search")
 
     var characterName = $("#character-name")
     var speciesType = $("#species-type")
@@ -61,14 +63,25 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
    getCharacterDetails().then(getRandomCharacter);
 });
 
+
+//search.on("click", function(event){
+//event.preventDefault();
+//let userSearch = $("#userInput").val().trim();
+//if(userSearch === results.name){
+ //   getRandomCharacter(userSearch)
+//}
+//alert(userSearch);
+//})
+
     function getCharacterDetails(){
-        let characterStatsURL = "https://hp-api.onrender.com/api/characters/students";
+        let characterStatsURL = "https://hp-api.onrender.com/api/characters";
         console.log(characterStatsURL);
 
         return fetch(characterStatsURL)
             .then(function(data){
                 return data.json()
             }).then(function(response){
+                console.log(response)
                 return response;
             });
     }
@@ -88,7 +101,7 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
 
         var newCharacterWandLength = results[randomIndex].wand.length ? results[randomIndex].wand.length : "unknown";
 
-        var newCharacterWandWood = results[randomIndex].wand.Wood ? results[randomIndex].wand.wood : "unknown";
+        var newCharacterWandWood = results[randomIndex].wand.wood ? results[randomIndex].wand.wood : "unknown";
 
         var newCharacterWandCore = results[randomIndex].wand.core ? results[randomIndex].wand.core : "unknown";
 
@@ -108,12 +121,13 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
         } else {
             characterImg.attr("src",newCharacterImage)
         }
+
         if(characterName !== ""){
       switch (characterName.text()) {
   case "Harry Potter":
     wandImage.attr("src", harrysWand);
     break;
-  case "Voldemort":
+  case "Lord Voldemort":
     wandImage.attr("src", voldemortsWand);
     break;
   case "trelawney":
@@ -122,10 +136,10 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
   case "tonks":
     wandImage.attr("src", tonksWand);
     break;
-  case "Severus":
+  case "Severus Snape":
     wandImage.attr("src", snapesWand);
     break;
-  case "Slughorn":
+  case "Horace Slughorn":
     wandImage.attr("src", slughornsWand);
     break;
   case "Sirius Black":
@@ -146,7 +160,7 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
   case "Narcissa Malfoy":
     wandImage.attr("src", narcissasWand);
     break;
-  case "mcgonagall":
+  case "Minerva McGonagall":
     wandImage.attr("src", mcgonagallsWand);
     break;
   case "mad-eye Moody":
@@ -173,16 +187,16 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
   case "Ginny Weasley":
     wandImage.attr("src", ginnysWand);
     break;
-  case "george":
+  case "George Weasley":
     wandImage.attr("src", georgesWand);
     break;
-  case "fred":
+  case "Fred Weasley":
     wandImage.attr("src", fredsWand);
     break;
-  case "fleur":
+  case "Fleur":
     wandImage.attr("src", fleursWand);
     break;
-  case "dumbledore":
+  case "Albus Dumbledore":
     wandImage.attr("src", dumbledoresWand);
     break;
   case "Draco Malfoy":
@@ -197,11 +211,11 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
   case "Cedric Diggory":
     wandImage.attr("src", cedricsWand);
     break;
-  case "bellatrix":
+  case "Bellatrix Lestrange":
     wandImage.attr("src", bellatrixsWand);
     break;
   default:
-    wandImage.addClass("hide");
+    wandImage.attr("src", unknownWand);;
     break;
 }
 }
@@ -221,6 +235,7 @@ var bellatrixsWand = "./assets/images/bellatrix_wand.png";
             });
     }
 
+    
 
     function getRandomSpell(response){ 
         let randomSpellIndex = Math.floor(Math.random() * response.length);
