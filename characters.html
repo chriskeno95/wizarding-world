@@ -10,74 +10,92 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <script src="./script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>Welcome to the wizarding world</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="./index.html">
+      <a class="navbar-brand" href="./index.html">
         <img src="./assets/images/harrypotter-logo.png" height="40" alt="" />
       </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="./index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./menu.html">Menu</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="./characters.html">Characters<span class="sr-only">(current)</span></a>
-      </li>
-            <li class="nav-item">
-        <a class="nav-link" href="./spells.html">Spells</a>
-      </li>
-    </ul>
-    <div class="search">
-        <form class="search-bar"action="">
-            <input type="text" placeholder="search" name="search">
-            <button type="submit"><img src="./assets/images/search_white.png"></button>
-        </form>
-    </div>
-  </div>
-</nav>
-    <article id="characters">
-         <button class="previous-character"><img src="./assets/images/arrow.png" height="40px" alt=""></button>
-      <div class="card mb-5 character-card" style="max-width: 800px;">
-  <div class="row no-gutters">
-    <div class="col-sm-5 id-card">
-        <img src="./assets/images/harry.jpg" alt="">
-    </div>
-    <div class="col-sm-7">
-      <div class="card-body">
-        <h5 id="character-name" class="card-title">Harry Potter</h5>
-        <ol class="card-text">
-            <li>Species: <span id="species-type">Human</span></li>
-        <li>Date of Birth: <span id="birth-date">31-07-1980</span></li>
-        <li>Hogwarts House: <span id="House">Griffindor</span></li>
-        <li>Patronus: <span id="patronus">Stag</span></li>
-        <li class="wand-stats">wand:
-        </li>
-        <li>Length:<span id="wand-length">11 inches</span></li>
-        <li>Core:<span id="wand-core">Phoenix feather</span></li>
-        <li>Wood:<span id="wand-wood">Holly</span></li>
-        </ol>
-        <img class="wand" src="./assets/images/harry-wand.png" alt="characters wand">
-        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./menu.html">Menu</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./characters.html"
+              >Characters<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./spells.html">Spells</a>
+          </li>
+        </ul>
+        <div class="search">
+          <form class="search-bar" action="">
+            <input type="text" placeholder="search" name="search" />
+            <button type="submit">
+              <img src="./assets/images/search_white.png" />
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<button class="next-character"><img src="./assets/images/next-arrow.png" height="40px" alt=""></button>
+    </nav>
+    <article id="characters">
+      <button class="previous-character">
+        <img src="./assets/images/arrow.png" height="40px" alt="" />
+      </button>
+      <div class="card mb-5 character-card" style="max-width: 800px">
+        <div class="row no-gutters">
+          <div class="col-sm-5 id-card">
+            <img id="characterImg" src="" alt="" />
+          </div>
+          <div class="col-sm-7">
+            <div class="card-body">
+              <h5 id="character-name" class="card-title"></h5>
+              <ol class="card-text">
+                <li>Species: <span id="species-type"></span></li>
+                <li>Date of Birth: <span id="birth-date"></span></li>
+                <li>Hogwarts House: <span id="house"></span></li>
+                <li>Patronus: <span id="patronus"></span></li>
+                <li class="wand-stats">wand:</li>
+                <li>Length:<span id="wand-length"></span></li>
+                <li>Core:<span id="wand-core"></span></li>
+                <li>Wood:<span id="wand-wood"></span></li>
+              </ol>
+              <img
+                class="wand"
+                src=""
+                alt="characters wand"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="next-character">
+        <img src="./assets/images/next-arrow.png" height="40px" alt="" />
+      </button>
     </article>
 
-    
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -88,5 +106,6 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
