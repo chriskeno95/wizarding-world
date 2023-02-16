@@ -215,7 +215,7 @@ var unknownWand = "./assets/images/unknown_wand.png"
     wandImage.attr("src", bellatrixsWand);
     break;
   default:
-    wandImage.attr("src", unknownWand);;
+    wandImage.attr("src", unknownWand);
     break;
 }
 }
