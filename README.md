@@ -17,7 +17,7 @@ My sisters and I have grown up watching the films, reading the books and quizzin
 
 ## Installation
 
-No need to install anything to view this project; you can view it [here]()
+No need to install anything to view this project; you can view it [here](https://chriskeno95.github.io/wizarding-world/spells.html)
 
 ## Technologies
 
