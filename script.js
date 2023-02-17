@@ -18,7 +18,7 @@ var lunasWand = "./assets/images/luna_wand.png";
 var luciussWand = "./assets/images/lucius_wand.png";
 var krumsWand = "./assets/images/krum_wand.png";
 var jamesWand = "./assets/images/james_wand.png";
-var harmionesWand = "./assets/images/Hermione_wand.png";
+var hermionesWand = "./assets/images/Hermione_wand.png";
 var ginnysWand = "./assets/images/ginny_wand.png";
 var georgesWand = "./assets/images/george_wand.png";
 var fredsWand = "./assets/images/fred_wand.png";
@@ -182,7 +182,7 @@ var unknownWand = "./assets/images/unknown_wand.png"
     wandImage.attr("src", jamesWand);
     break;
   case "Hermione Granger":
-    wandImage.attr("src", harmionesWand);
+    wandImage.attr("src", hermionesWand);
     break;
   case "Ginny Weasley":
     wandImage.attr("src", ginnysWand);
